@@ -254,7 +254,12 @@ export default function Homepage() {
           </thead>
           <tbody>
             {renderData.map((person) => (
-              <tr key={person.id}>
+              <tr
+                key={person.id}
+                className={`${
+                  selectedArr.includes(person.id) ? "gray-row" : ""
+                }`}
+              >
                 <td>
                   <input
                     type="checkbox"
